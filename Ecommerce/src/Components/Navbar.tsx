@@ -1,16 +1,17 @@
-
+import { useNavigate } from "react-router-dom"
 type Props = {}
 
 export default function Navbar({}: Props) {
+    const navigate = useNavigate();
 
     const clickProductPage=()=>{
-        window.location.href = "/ProductsPage"
+        navigate('/ProductsPage');
     }
     const clickHomePage=()=>{
-        window.location.href = '/'
+        navigate('/');
     }
   return (
-    <div className="bg-black text-white  flex flex-row justify-between items-center p-5">
+    <div className="bg-black text-white  flex flex-row justify-between items-center p-5 sticky top-0 z-10">
         <div className="flex flex-row gap-5">
             <button className="text-lg cursor-pointer" onClick={clickHomePage}>Home</button>
             <button className="text-lg cursor-pointer" onClick={clickProductPage}>Products</button>

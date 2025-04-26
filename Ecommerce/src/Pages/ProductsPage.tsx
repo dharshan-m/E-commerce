@@ -1,4 +1,5 @@
 import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 import Product1 from '../assets/Images/product1.jpg';
 import Product2 from '../assets/Images/product2.jpg';
 import Product3 from '../assets/Images/product3.jpg';
@@ -120,7 +121,7 @@ export default function Products({}: Props) {
   return (
     <>
         <div>
-            <div>
+            <div className='sticky top-0 z-10'>
                 <Navbar/>
             </div>
             <div className='grid grid-cols-4 gap-5 p-10'>
@@ -135,6 +136,9 @@ export default function Products({}: Props) {
                         </div>
                     </div>
                 ))}
+            </div>
+            <div>
+                <Footer/>
             </div>
         </div>
     </>
